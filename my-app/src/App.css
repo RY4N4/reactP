@@ -136,3 +136,17 @@
   /* This uses a filter to turn the default dark icon into a light one */
   filter: invert(1) brightness(2);
 }
+
+/* Light Mode (default) */
+.app {
+  background-color: white;
+  color: black;
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #121212;
+  color: white;
+}

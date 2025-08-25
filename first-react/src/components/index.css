@@ -1,0 +1,89 @@
+/* index.css */
+
+/* Reset a bit */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header container */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  margin-top: 20px;
+  gap: 12px;
+  color: cyan;
+  padding: 16px 24px;
+  background: linear-gradient(135deg, #ff6b6b, #feca57);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 0 0 16px 16px;
+}
+
+/* Logo image */
+.heading-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+/* Title text */
+.heading {
+  font-size: 1.8rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff;
+}
+
+.input-form {
+  background-color: #feca57;
+  margin-top: 10px;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;  
+}
+
+.input-form input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  border: 2px solid white;
+
+}
+
+.placehold {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+  color: #ffffff; 
+}
+
+.placehold::placeholder {
+  color: #aaa;  
+  font-style: italic;
+}
+
+
+.add-ingredient {
+  background-color: #000000;
+  color: #fff;
+  font-weight: 500;
+  border: 2px solid white;
+  border-radius: 6px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-ingredient:hover {
+  background-color: #ee5253;
+}
