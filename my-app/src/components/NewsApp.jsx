@@ -1,21 +1,12 @@
-// src/NewsApp.js
-import React, { Component } from "react";
-import Nav from "./nav";
-import News from "./news";
-
+import React, { Component } from 'react'
 
 export default class NewsApp extends Component {
-  c = "Ryan";
-
+    c = "Ryan"
   render() {
     return (
-      <>
-        <div>
-          <p>Hello {this.c}</p>
-        </div>
-        <Nav />
-        <News />
-      </>
-    );
+      <div>
+        <p>hello {this.c}</p>
+      </div>
+    )
   }
 }

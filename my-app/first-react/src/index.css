@@ -1,0 +1,173 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: center;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Header Styles */
+#head {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 70px;
+  width: 450px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 8px;
+}
+
+/* Main Content Styles */
+#main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.2rem;
+  height: 200px;
+  width: 450px;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 8px;
+  margin-top: 1rem;
+  
+}
+#about {
+  margin: 0 auto;
+  text-align: center;
+}
+
+header {
+  background-color: rgb(249, 68, 68);
+  color: #f9f9f9;
+  justify-content: center;
+  display: flex;
+  gap: 1 rem;
+}
+.header {
+  display: flex;
+  align-items: center; /* vertical alignment */
+  background-color: #F55A5A;
+  padding: 10px 20px;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  margin-right: 15px;
+}
+
+.title {
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #282c34;
+  padding: 1rem;
+  color: white;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#japan{
+  display: flex;
+  gap: 1.3rem;
+}
+
+#img-airBNB-logo{
+  height: 70px;
+  width: 400px;
+  display: flex;
+  background-color: #535bf2;
+  padding: 20px 36px;
+  box-shadow: 0px 2.9px 7.4px rgba(242,242, 242);
+}
+
+.background-image{
+  height: 200px;
+  width: 280px;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: antiquewhite;
+}
