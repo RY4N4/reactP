@@ -7,16 +7,37 @@ export class News extends Component {
         super();
         this.state = {
             articles : [],
-            loading : false
+            loading : false,
+            page : 1
         }
     }
 
     async componentDidMount(){
-        let url ="https://newsapi.org/v2/everything?q=apple&from=2025-08-23&to=2025-08-23&sortBy=popularity&apiKey=8ca845f321994bf08bb068585f795bd2";
-        let data = await fetch(url);
-        let parsedData = await data.json()
-        this.setState({articles : parsedData.articles})
-    }
+  let url = `https://newsapi.org/v2/everything?q=apple&from=2025-08-23&to=2025-08-23&sortBy=popularity&apiKey=8ca845f321994bf08bb068585f795bd2&page=1&pageSize=20`;
+  let data = await fetch(url);
+  let parsedData = await data.json();
+  this.setState({ articles: parsedData.articles, totalResults: parsedData.totalResults });
+}
+
+handleNext = async () => {
+  if (this.state.page + 1 <= Math.ceil(this.state.totalResults / 20)) {
+    let url = `https://newsapi.org/v2/everything?q=apple&from=2025-08-23&to=2025-08-23&sortBy=popularity&apiKey=8ca845f321994bf08bb068585f795bd2&page=${this.state.page + 1}&pageSize=20`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    this.setState({ page: this.state.page + 1, articles: parsedData.articles });
+  }
+}
+
+handlePrevious = async () => {
+  if (this.state.page > 1) {
+    let url = `https://newsapi.org/v2/everything?q=apple&from=2025-08-23&to=2025-08-23&sortBy=popularity&apiKey=8ca845f321994bf08bb068585f795bd2&page=${this.state.page - 1}&pageSize=20`;
+    let data = await fetch(url);
+    let parsedData = await data.json();
+    this.setState({ page: this.state.page - 1, articles: parsedData.articles });
+  }
+}
+
+    
 
   render() {
     return (
@@ -37,6 +58,11 @@ export class News extends Component {
             </div>
             )
             })}
+    <div className="container d-flex justify-content-between">
+  <button className="btn btn-outline-success" onClick={this.handlePrevious} disabled={this.state.page <= 1}>&larr; Previous</button>
+  <button className="btn btn-outline-success" onClick={this.handleNext} disabled={this.state.page + 1 > Math.ceil(this.state.totalResults / 20)}>Next &rarr;</button>
+</div>
+
           </div>
         </div>
       </>

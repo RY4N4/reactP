@@ -3,8 +3,6 @@ import cooking from "./cooking.png"
 
 export class newsItem extends Component {
 
-
-
   render() {
     let {title,description,imageUrl,newsUrl} = this.props;
     return (
@@ -17,11 +15,11 @@ export class newsItem extends Component {
     <p className="card-text">{description}</p>
     <a href={newsUrl} className="btn btn-outline-danger">Read More</a>
     </div>
-</div>
-      </div>
-
+    </div>
     
-</>
+      </div>
+      
+    </>
     )
   }
 }
